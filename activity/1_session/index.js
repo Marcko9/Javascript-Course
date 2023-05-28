@@ -8,22 +8,22 @@ console.log("Ejercicio 1");
 // Ejercicio 3
 
 // Ejercicio 4
-console.log ("Ejercicio 4")
+console.log("Ejercicio 4")
 divisibleEntre7();
 
 // Ejercicio 5
 
 // Ejercicio 6
-let formatter = new Object({ 
-    prefix: "Hello ", 
+let formatter = new Object({
+    prefix: "Hello ",
     append: function(arg) {
-        console.log(formatter.prefix + arg);
-    },
-    toLowerCase: function(arg){
-        return arg.toLowerCase();
-        //console.log(arg.toLowerCase());
-    }
+            console.log(formatter.prefix + arg);
+        }
 });
+
+formatter.toLowerCase = function(arg) {
+    return arg.toLowerCase();
+}
 
 /*Object.defineProperty(formatter, 'toLowerCase', {
     get: funtion (arg){
@@ -39,5 +39,5 @@ let formatter = new Object({
 
 console.log(formatter);
 formatter.append("World");
-formatter.toLowerCase("I'm Marcko");
+console.log(formatter.toLowerCase("I'm Marcko"));
 //console.log(Object.getPrototypeOf(formatter));
